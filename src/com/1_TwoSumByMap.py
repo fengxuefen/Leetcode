@@ -12,6 +12,8 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        
-s = Solution()
-nums = s.twoSum(nums, 9)
+        valuedic = {}
+        for index in range(len(nums)):
+            if target - nums[index] in valuedic:
+                return min(index + 1,valuedic[target - nums[index]] + 1),max(index + 1,valuedic[target - nums[index]] + 1)
+            valuedic[nums[index]] = index

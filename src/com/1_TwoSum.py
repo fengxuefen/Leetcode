@@ -3,7 +3,6 @@ Created on 2015-10-22
 
 @author: Fen
 '''
-nums = [2,4,7,9]
 
 class Solution(object):
     def twoSum(self, nums, target):
@@ -27,5 +26,3 @@ class Solution(object):
         if(pos1 == pos2):
             pos2 = nums[pos1:].index(sortedNums[right]) + pos1 + 1
         return min(pos1,pos2), max(pos1,pos2)    
-s = Solution()
-nums = s.twoSum(nums, 9)
