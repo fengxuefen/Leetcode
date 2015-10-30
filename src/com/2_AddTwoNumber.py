@@ -18,17 +18,17 @@ class Solution(object):
         """
         oriNode=ListNode(0)
         curNode = oriNode
-        sum = 0
+        sumed = 0;
         while(True) :
             if(l1 != None) :
-                sum = sum + l1.val
+                sumed = sumed + l1.val
                 l1 = l1.next
             if(l2 != None) :
-                sum = sum + l2.val
+                sumed = sumed + l2.val
                 l2 = l2.next
-            curNode.val = sum % 10
-            sum = sum / 10
-            if(l1 != None or l2 != None or sum != 0) :
+            curNode.val = sumed % 10
+            sumed = sumed / 10
+            if(l1 != None or l2 != None or sumed != 0) :
                 curNode.next = ListNode(0)
                 curNode = curNode.next
             else :
